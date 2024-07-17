@@ -1,98 +1,98 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    background: #f7edff;
-}
-
-.btns{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-.btns button{
-    background: #333;
-    color: #fff;
-    border: 0;
-    outline: 0;
-    width: 120px;
-    height: 40px;
-    margin: 5px;
-    cursor: pointer;
+body {
+  background: #f7edff;
 }
 
-#notifBox{
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 20px;
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
-#notifBox .toastNotif{
-    width: 400px;
-    height: 80px;
-    padding-right: 15px;
-    background: #fff;
-    font-weight: 500;
-    margin: 15px 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    position: relative;
-    transform: translateX(100%);
-    animation: arrivalNotif 0.5s linear forwards;
+.btns button {
+  background: #333;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  width: 120px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#notifBox {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+#notifBox .toastNotif {
+  width: 400px;
+  height: 80px;
+  padding-right: 15px;
+  background: #fff;
+  font-weight: 500;
+  margin: 15px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  transform: translateX(100%);
+  animation: arrivalNotif 0.5s linear forwards;
 }
 @keyframes arrivalNotif {
-    100%{
-        transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-#notifBox .toastNotif i{
-    margin: 0 20px;
-    font-size: 35px;
-    color: green;
+#notifBox .toastNotif i {
+  margin: 0 20px;
+  font-size: 35px;
+  color: green;
 }
-#notifBox .toastNotif.error i{
-    color: red;
+#notifBox .toastNotif.error i {
+  color: red;
 }
-#notifBox .toastNotif.invalid i{
-    color: orange;
+#notifBox .toastNotif.invalid i {
+  color: orange;
 }
 
-#notifBox .toastNotif::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 5px;
-    background: green;
-    animation: removeTimeLine 5s linear forwards;
+#notifBox .toastNotif::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: green;
+  animation: removeTimeLine 5s linear forwards;
 }
-#notifBox .toastNotif.error::after{
-    background: red;
+#notifBox .toastNotif.error::after {
+  background: red;
 }
-#notifBox .toastNotif.invalid::after{
-    background: orange;
+#notifBox .toastNotif.invalid::after {
+  background: orange;
 }
-@keyframes removeTimeLine{
-    100%{
-        width: 0;
-    }
+@keyframes removeTimeLine {
+  100% {
+    width: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    #notifBox .toastNotif{
-        width: 75vw !important;
-    }
+  #notifBox .toastNotif {
+    width: 75vw !important;
+  }
 }
