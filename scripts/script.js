@@ -11,6 +11,8 @@ function showNotif(msg){
     notifElem.classList.add('toastNotif')
     notifElem.innerHTML = msg
 
+    msg.includes('error') && notifElem.classList.add('error')
+    msg.includes('Invalid') && notifElem.classList.add('invalid')
 
     notifBox.appendChild(notifElem)
 }
