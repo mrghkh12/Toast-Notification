@@ -1,0 +1,9 @@
+{
+  "conventionalCommits.scopes": [
+    "index.html & style.css",
+    "style.css",
+    "index.html",
+    "script.js",
+    "scripy.js & style.css"
+  ]
+}
