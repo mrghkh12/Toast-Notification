@@ -43,3 +43,14 @@ body{
     align-items: center;
     border-radius: 5px;
 }
+#notifBox .toastNotif i{
+    margin: 0 20px;
+    font-size: 35px;
+    color: green;
+}
+#notifBox .toastNotif.error i{
+    color: red;
+}
+#notifBox .toastNotif.invalid i{
+    color: orange;
+}
