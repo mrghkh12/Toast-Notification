@@ -15,4 +15,7 @@ function showNotif(msg){
     msg.includes('Invalid') && notifElem.classList.add('invalid')
 
     notifBox.appendChild(notifElem)
+
+
+    setTimeout(()=>notifElem.remove(), 5000)
 }
