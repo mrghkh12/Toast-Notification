@@ -9,7 +9,11 @@ body{
 }
 
 .btns{
-    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 .btns button{
     background: #333;
@@ -35,6 +39,7 @@ body{
 #notifBox .toastNotif{
     width: 400px;
     height: 80px;
+    padding-right: 15px;
     background: #fff;
     font-weight: 500;
     margin: 15px 0;
@@ -43,7 +48,15 @@ body{
     align-items: center;
     border-radius: 5px;
     position: relative;
+    transform: translateX(100%);
+    animation: arrivalNotif 0.5s linear forwards;
 }
+@keyframes arrivalNotif {
+    100%{
+        transform: translateX(0);
+    }
+}
+
 #notifBox .toastNotif i{
     margin: 0 20px;
     font-size: 35px;
@@ -75,5 +88,11 @@ body{
 @keyframes removeTimeLine{
     100%{
         width: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #notifBox .toastNotif{
+        width: 75vw !important;
     }
 }
